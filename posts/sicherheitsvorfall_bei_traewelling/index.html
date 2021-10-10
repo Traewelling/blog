@@ -1,0 +1,79 @@
+<!doctype html><html lang=de-de>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Sicherheitsvorfall bei Traewelling &#183; Träwelling Blog</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+<link rel=icon href=favicon.ico>
+<link rel=icon type=image/png sizes=32x32 href=/images/favicon-32x32.png>
+<link rel=icon type=image/png sizes=16x16 href=/images/favicon-16x16.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<link href rel=alternate type=application/rss+xml title="Träwelling Blog">
+</head>
+<body>
+<nav class=nav>
+<div class=nav-container>
+<a href=/>
+<h2 class=nav-title>Träwelling Blog</h2>
+</a>
+<ul>
+</ul>
+</div>
+</nav>
+<main>
+<div class=post>
+<div class=post-info>
+<span>Written by</span>
+<br>
+<span>on&nbsp;</span><time datetime="2021-06-20 13:51:26 +0000 UTC">June 20, 2021</time>
+</div>
+<h1 class=post-title>Sicherheitsvorfall bei Traewelling</h1>
+<div class=post-line></div>
+<p><em>(english version below)</em></p>
+<p>Heute Morgen (Sonntag, den 20.06.2021) ist einem unserer Entwickler eine Schwachstelle in Träwelling aufgefallen, welche mit der Anbindung der Social Media-Konten (Twitter und Mastodon) zusammenhängt.</p>
+<p>Die Kommunikation mit diesen externen Diensten benötigt mehrere Schlüssel:
+Zunächst zwei Anwendungsschlüssel (&ldquo;AppId&rdquo; und &ldquo;Secret&rdquo;), welche Träwelling einmalig vorhält und dann für jeden User private Schlüssel (&ldquo;Client Secrets&rdquo;), mit denen Träwelling im Namen dieses Users z.B. Tweets/Toots posten darf.</p>
+<p>Beim Aufruf einzelner Endpunkte der Träwelling-API konnten die Client-Secrets für Twitter und Mastodon vereinzelter User zeitweise im Klartext ausgelesen werden.
+Es besteht derzeit kein Verdacht, dass diese Schwachstelle ausgenutzt wurde. Die AppId und das AppSecret sind von der Lücke nicht betroffen.</p>
+<p>Träwelling speichert diese Daten <a href=https://laravel.com/docs/8.x/encryption>verschlüsselt</a> in der Datenbank, um die Zugangsdaten besonders zu schützen.</p>
+<h2 id=was-wurde-getan>Was wurde getan?</h2>
+<p>Nach dem Bekanntwerden der Schwachstelle haben wir umgehend <a href=https://github.com/Traewelling/traewelling/pull/441>einen Patch</a> veröffentlicht und eingespielt, sodass keine User-Schlüssel mehr preisgegeben werden.</p>
+<p>Außerdem haben wir unsere Anwendungsschlüssel zurückgesetzt, sodass alle User-Schlüssel jetzt ungültig sind und daher nicht mehr verwendet werden können.</p>
+<h2 id=was-muss-ich-tun>Was muss ich tun?</h2>
+<p>Da wir die Verbindung zu deinen Twitter-und Mastodon-Konten getrennt haben, musst du diese erneut verbinden. Dies ist durch einfaches Abmelden und Anmelden mittels der Provider in den Einstellungen von Träwelling behoben.</p>
+<h2 id=umgang-mit-sicherheitsvorfällen>Umgang mit Sicherheitsvorfällen</h2>
+<p>Träwelling wird nur von einem kleinen Team betrieben, deswegen brauchen wir jede Hilfe, um Fehler und Probleme zu finden.
+Wenn Du eine Sicherheitslücke in Träwelling findest, schreibe uns gerne eine Email.
+Unsere Emailadressen und PGP-Schlüssel findest Du in der <a href=https://traewelling.de/security.txt>security.txt</a>.</p>
+<p>Wir versuchen stets, die Sicherheit der uns anvertrauten Daten zugewährleisten, und eventuelle Probleme offen mit den Nutzer*innen von Träwelling zu kommunizieren. Bei Fragen sind wir zudem über die Social Media-Kanäle von Träwelling (<a href=https://twitter.com/traewelling>@Traewelling</a> auf Twitter und <a href=https://chaos.social/@traewelling>@traewelling@chaos.social</a> bei Mastodon) erreichbar.</p>
+<hr>
+<h1 id=english-version>English version</h1>
+<p>This morning, one of our developers noticed a vulnerability in Träwelling, which is related to the connection of the social media accounts (Twitter and Mastodon).</p>
+<p>This communication with the social media services ask for multiple keys to establish a connection.
+Two of those keys are used throughout Träwelling (&ldquo;application id&rdquo; and &ldquo;secret&rdquo;), the other keys are user-specific (&ldquo;client secrets&rdquo;) and authorize Träwelling to post under your name. Träwelling stores these keys <a href=https://laravel.com/docs/8.x/encryption>encrypted</a> in our database.</p>
+<p>When calling specific endpoints of the Träwelling API, the client secrets for Twitter and Mastodon of individual users could be read in plain text. There is currently no reason to suspect that the vulnerability has been exploited. AppId and AppSecret are not affected by this.</p>
+<h2 id=what-have-we-done>What have we done?</h2>
+<p>After discovering this vulnerability, we immediately developed and deployed <a href=https://github.com/Traewelling/traewelling/pull/441>a patch</a> to stop the leak of more user data.</p>
+<p>In addition, we reset all user keys for Twitter and Mastodon, so those keys are no longer valid.</p>
+<h2 id=what-do-you-need-to-do>What do you need to do?</h2>
+<p>To continue posting your journeys to these platforms, you need to reconnect your Träwelling account with Twitter and Mastodon. This can be done by simply logging off and logging on through these providers.</p>
+<h2 id=handling-security-vulnerabilies>Handling security vulnerabilies</h2>
+<p>A small team works on the development of Träwelling, so we need every help to find bugs and loopholes.
+If you find a security issue with Träwelling, please send us an email.
+You can find our addresses and encryption keys in our <a href=https://traewelling.de/security.txt>security.txt</a>.</p>
+<p>We always try our best to preserve the security of our user&rsquo;s data, and communicate problems with the users of Träwelling.
+For any questions, please contact us via our social media channels (<a href=https://twitter.com/traewelling>@Traewelling</a> on Twitter and <a href=https://chaos.social/@traewelling>@traewelling@chaos.social</a> on Mastodon).</p>
+</div>
+<div class=pagination>
+<a href=/posts/release-1.8/ class="left arrow">&#8592;</a>
+<a href=# class=top>Top</a>
+</div>
+</main>
+<footer>
+<span>
+&copy; <time datetime="2021-10-10 20:31:42.722476456 +0000 UTC m=+0.048783877">2021</time> . Made with <a href=https://gohugo.io>Hugo</a> using the <a href=https://github.com/EmielH/tale-hugo/>Tale</a> theme.
+</span>
+</footer>
+</body>
+</html>
