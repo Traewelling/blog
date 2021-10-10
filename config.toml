@@ -1,0 +1,6 @@
+baseURL = 'https://blog.traewelling.de/'
+languageCode = 'de-de'
+title = 'Träwelling Blog'
+theme = "tale"
+author = "Das Träwelling Team"
+publishDir = "docs"
