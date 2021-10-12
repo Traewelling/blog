@@ -18,10 +18,15 @@ sectionPagesMenu = "main"
      url = 'https://traewelling.de/about'
      weight = -110
    [[menu.main]]
+     name = 'Serverstatus'
+     url = 'https://status.traewelling.de'
+     weight = -100
+   [[menu.main]]
      name = 'Twitter'
      url = 'https://twitter.com/traewelling'
-     weight = -100
+     weight = -90
    [[menu.main]]
      name = 'Mastodon'
      url = 'https://chaos.social/@traewelling'
+     weight = 80
 
