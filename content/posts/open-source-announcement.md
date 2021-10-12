@@ -2,6 +2,7 @@
 title: "Träwelling goes Open Source!"
 date: 2020-02-20 00:00:00
 author: "Das Träwelling Team"
+categories: [Bekanntmachungen]
 ---
 Seit fast 7 Monaten arbeiten wir in einem kleinen Team an Träwelling und haben eine Menge geschafft: Ein neues User-Interface, eine Detail-Seite für Deinen Check-In und die Möglichkeit, sich mit Mastodon anzumelden, sind die wohl bekanntesten Features. Unter der Haube versuchen wir, die komplexe Bahnwelt zu reflektieren; immerhin werden jeden Tag über 100 Verbindungen in Träwelling getrackt.
 

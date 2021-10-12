@@ -2,6 +2,7 @@
 title: "*klingeling* Träwelling hat was neues!  "
 date: 2020-06-13 17:15:48
 author: "Das Träwelling Team"
+categories: [Bekanntmachungen]
 ---
 Wir haben endlich Notifications!  
 Endlich könnt ihr die Funktion, die wir damals wegen Twitter API-Beschränkungen abschaffen mussten wieder nutzen!  

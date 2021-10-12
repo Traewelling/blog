@@ -1,7 +1,7 @@
 ---
 title: "API-Probleme im In- & Ausland"
 date: 2017-08-01 00:00:00
-author: Levin Herr
+categories: [Fehlerbehebung]
 ---
 
 Bei uns ist intern einiges schief gelaufen. Es ging total an uns vorbei, dass opendata.ch ihre [Api abgeändert hat](https://opendata.ch/2017/06/search-ch-rettet-transport-opendata-ch/). So dachten wir, die Fehler, wie fehlende Abfahrten an gewissen Bahnhöfen, die gestern und heute (ab 31.07.2017) auftraten, waren ein typischer Schluckauf der SBB-API. Weit gefehlt.

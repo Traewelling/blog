@@ -1,7 +1,7 @@
 ---
 title: "Traewelling Release 1 0"
 date: 2019-11-24 13:30:00
-author: Levin Herr
+categories: [Changelog]
 ---
 Lange hat sich an Träwelling nichts getan, obwohl es seit 2017 mehrere Anläufe gab. 
 

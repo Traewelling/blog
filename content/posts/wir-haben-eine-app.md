@@ -1,7 +1,7 @@
 ---
 title: "Wir haben eine App! Irgendwie..."
 date: 2014-07-16 00:00:00
-author: Levin Herr
+categories: [Bekanntmachungen]
 ---
 Ihr wartet alle schon sehnsüchtig auf eine App und endlich habe ich (Levin) es geschafft, eine total crappige App zu schreiben. Yay!
 

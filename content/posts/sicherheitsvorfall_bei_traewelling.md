@@ -1,6 +1,8 @@
 ---
 title: "Sicherheitsvorfall bei Traewelling"
 date: 2021-06-20 13:51:26
+author: "Das Träwelling Team"
+categories: [Bekanntmachungen]
 ---
 *(english version below)*
 

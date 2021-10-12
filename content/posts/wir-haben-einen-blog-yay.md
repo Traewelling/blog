@@ -1,10 +1,7 @@
 ---
 title: "Wir Haben Einen Blog Yay"
-author: "Levin Herr"
-twitter: HerrLevin_
-categories: ["Bekanntmachungen"]
+categories: [Bekanntmachungen]
 date: 2013-11-02 00:00:00
-draft: false
 ---
 In unserem ersten Blogpost möchte ich unsere zwei neuen Mitglieder im #Träwelling-Team recht herzlich begrüßen: @janh97 (Account inzwischen gelöscht) im Bereich “Design&Code” und @nerdhair_ (Account inzwischen gelöscht) im Bereich “Marketing".
 
