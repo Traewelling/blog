@@ -2,4 +2,26 @@ baseURL = 'https://blog.traewelling.de/'
 languageCode = 'de-de'
 title = 'Träwelling Blog'
 theme = "tale"
-author = "Das Träwelling Team"
+sectionPagesMenu = "main"
+
+[Author]
+    name = "Das Träwelling Team"
+
+[taxonomies]
+   tag = "tags"
+   category = "categories"
+
+
+[menu]
+   [[menu.main]]
+     name = 'Über Träewlling'
+     url = 'https://traewelling.de/about'
+     weight = -110
+   [[menu.main]]
+     name = 'Twitter'
+     url = 'https://twitter.com/traewelling'
+     weight = -100
+   [[menu.main]]
+     name = 'Mastodon'
+     url = 'https://chaos.social/@traewelling'
+
