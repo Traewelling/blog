@@ -1,177 +1,26 @@
-<!doctype html><html lang=de-de>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Posts &#183; Träwelling Blog</title>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css>
-<link rel=icon href=favicon.ico>
-<link rel=icon type=image/png sizes=32x32 href=/images/favicon-32x32.png>
-<link rel=icon type=image/png sizes=16x16 href=/images/favicon-16x16.png>
-<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<link href=/posts/index.xml rel=alternate type=application/rss+xml title="Träwelling Blog">
-</head>
-<body>
-<nav class=nav>
-<div class=nav-container>
-<a href=/>
-<h1 class=nav-title>Träwelling Blog</h1>
-</a>
-<ul>
-<li>
-<a href=https://traewelling.de/about>
-<span>Über Träewlling</span>
-</a>
-</li>
-<li>
-<a href=https://status.traewelling.de>
-<span>Serverstatus</span>
-</a>
-</li>
-<li>
-<a href=https://twitter.com/traewelling>
-<span>Twitter</span>
-</a>
-</li>
-<li>
-<a href=https://chaos.social/@traewelling>
-<span>Mastodon</span>
-</a>
-</li>
-<li>
-<a href=/posts/>
-<span>Posts</span>
-</a>
-</li>
-</ul>
-</div>
-</nav>
-<main>
-<div class=catalogue>
-<a href=https://blog.traewelling.de/posts/sicherheitsvorfall_bei_traewelling/ class=catalogue-item>
-<div>
-<time datetime="2021-06-20 13:51:26 +0000 UTC" class=catalogue-time>June 20, 2021</time>
-<h2 class=catalogue-title>Sicherheitsvorfall bei Traewelling</h2>
-<div class=catalogue-line></div>
-<p>
-(english version below)
+<!doctype html><html lang=de-de><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Posts &#183; Träwelling Blog</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><link rel=icon href=favicon.ico><link rel=icon type=image/png sizes=32x32 href=/images/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/images/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link href=/posts/index.xml rel=alternate type=application/rss+xml title="Träwelling Blog"></head><body><nav class=nav><div class=nav-container><a href=/><h1 class=nav-title>Träwelling Blog</h1></a><ul><li><a href=https://traewelling.de/about><span>Über Träewlling</span></a></li><li><a href=https://status.traewelling.de><span>Serverstatus</span></a></li><li><a href=https://twitter.com/traewelling><span>Twitter</span></a></li><li><a href=https://chaos.social/@traewelling><span>Mastodon</span></a></li><li><a href=/posts/><span>Posts</span></a></li></ul></div></nav><main><div class=catalogue><a href=https://blog.traewelling.de/posts/sicherheitsvorfall_bei_traewelling/ class=catalogue-item><div><time datetime="2021-06-20 13:51:26 +0000 UTC" class=catalogue-time>June 20, 2021</time><h2 class=catalogue-title>Sicherheitsvorfall bei Traewelling</h2><div class=catalogue-line></div><p>(english version below)
 Heute Morgen (Sonntag, den 20.06.2021) ist einem unserer Entwickler eine Schwachstelle in Träwelling aufgefallen, welche mit der Anbindung der Social Media-Konten (Twitter und Mastodon) zusammenhängt.
 Die Kommunikation mit diesen externen Diensten benötigt mehrere Schlüssel: Zunächst zwei Anwendungsschlüssel (&ldquo;AppId&rdquo; und &ldquo;Secret&rdquo;), welche Träwelling einmalig vorhält und dann für jeden User private Schlüssel (&ldquo;Client Secrets&rdquo;), mit denen Träwelling im Namen dieses Users z.B. Tweets/Toots posten darf.
-Beim Aufruf einzelner Endpunkte der Träwelling-API konnten die Client-Secrets für Twitter und Mastodon vereinzelter User zeitweise im Klartext ausgelesen werden.
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/release-1.8/ class=catalogue-item>
-<div>
-<time datetime="2021-05-19 13:07:00 +0000 UTC" class=catalogue-time>May 19, 2021</time>
-<h2 class=catalogue-title>Release v1.8</h2>
-<div class=catalogue-line></div>
-<p>
-In diesem Träwelling Updaten präsentieren wir euch eine erste Statistikseite und die Funktion, andere Benutzer stummzuschalten. Außerdem werden Check-Ins anderer User, die mehr als 20 Minuten in der Zukunft liegen nicht angezeigt.
+Beim Aufruf einzelner Endpunkte der Träwelling-API konnten die Client-Secrets für Twitter und Mastodon vereinzelter User zeitweise im Klartext ausgelesen werden.</p></div></a><a href=https://blog.traewelling.de/posts/release-1.8/ class=catalogue-item><div><time datetime="2021-05-19 13:07:00 +0000 UTC" class=catalogue-time>May 19, 2021</time><h2 class=catalogue-title>Release v1.8</h2><div class=catalogue-line></div><p>In diesem Träwelling Updaten präsentieren wir euch eine erste Statistikseite und die Funktion, andere Benutzer stummzuschalten. Außerdem werden Check-Ins anderer User, die mehr als 20 Minuten in der Zukunft liegen nicht angezeigt.
 Neue Funktionen ✨ Added new statistics page (#285)
 ✨ Filtered out check-ins that are more than 20 minutes in the future (#349)
 ✨ Mute users (#333)
 🚸 fixed hover effect (#342)
-Fehlerbehebungen ♻️ moved social URL generation into user model (#347)
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/traewelling-api-v0/ class=catalogue-item>
-<div>
-<time datetime="2020-06-13 17:15:48 +0000 UTC" class=catalogue-time>June 13, 2020</time>
-<h2 class=catalogue-title>*klingeling* Träwelling hat was neues! </h2>
-<div class=catalogue-line></div>
-<p>
-Wir haben endlich Notifications!
+Fehlerbehebungen ♻️ moved social URL generation into user model (#347)</p></div></a><a href=https://blog.traewelling.de/posts/traewelling-api-v0/ class=catalogue-item><div><time datetime="2020-06-13 17:15:48 +0000 UTC" class=catalogue-time>June 13, 2020</time><h2 class=catalogue-title>*klingeling* Träwelling hat was neues!</h2><div class=catalogue-line></div><p>Wir haben endlich Notifications!
 Endlich könnt ihr die Funktion, die wir damals wegen Twitter API-Beschränkungen abschaffen mussten wieder nutzen!
 Wenn ihr in einem Zug unterwegs seid, könnt ihr jetzt sehen, wenn jemand bei euch eincheckt!
 Ebenso seht ihr neue Likes auf eure Checkins und neue Follower!
 Wie damals am Ende unseres Trailers angekündigt, soll Träwelling irgendwann auch als App verfügbar sein.
-Diesen sehr aufwändigen Schritt haben wir leider noch nicht machen können, dafür einen sehr großen in diese Richtung: Träwelling bekommt eine API!
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/open-source-announcement/ class=catalogue-item>
-<div>
-<time datetime="2020-02-20 00:00:00 +0000 UTC" class=catalogue-time>February 20, 2020</time>
-<h2 class=catalogue-title>Träwelling goes Open Source!</h2>
-<div class=catalogue-line></div>
-<p>
-Seit fast 7 Monaten arbeiten wir in einem kleinen Team an Träwelling und haben eine Menge geschafft: Ein neues User-Interface, eine Detail-Seite für Deinen Check-In und die Möglichkeit, sich mit Mastodon anzumelden, sind die wohl bekanntesten Features. Unter der Haube versuchen wir, die komplexe Bahnwelt zu reflektieren; immerhin werden jeden Tag über 100 Verbindungen in Träwelling getrackt.
-Ein Teil unserer Nutzer*innen möchte immer mehr von der Plattform. Auf dem 36C3 und darüber hinaus haben wir viele Zuschriften erhalten, die sich bestimmte Features (Private Reisen, ein besserer Export, etc.
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/traewelling-release-1-0/ class=catalogue-item>
-<div>
-<time datetime="2019-11-24 13:30:00 +0000 UTC" class=catalogue-time>November 24, 2019</time>
-<h2 class=catalogue-title>Traewelling Release 1 0</h2>
-<div class=catalogue-line></div>
-<p>
-Lange hat sich an Träwelling nichts getan, obwohl es seit 2017 mehrere Anläufe gab.
+Diesen sehr aufwändigen Schritt haben wir leider noch nicht machen können, dafür einen sehr großen in diese Richtung: Träwelling bekommt eine API!</p></div></a><a href=https://blog.traewelling.de/posts/test/ class=catalogue-item><div><time datetime="2020-03-31 13:00:00 +0000 UTC" class=catalogue-time>March 31, 2020</time><h2 class=catalogue-title>Test</h2><div class=catalogue-line></div><p>Grüße Levin</p></div></a><a href=https://blog.traewelling.de/posts/open-source-announcement/ class=catalogue-item><div><time datetime="2020-02-20 00:00:00 +0000 UTC" class=catalogue-time>February 20, 2020</time><h2 class=catalogue-title>Träwelling goes Open Source!</h2><div class=catalogue-line></div><p>Seit fast 7 Monaten arbeiten wir in einem kleinen Team an Träwelling und haben eine Menge geschafft: Ein neues User-Interface, eine Detail-Seite für Deinen Check-In und die Möglichkeit, sich mit Mastodon anzumelden, sind die wohl bekanntesten Features. Unter der Haube versuchen wir, die komplexe Bahnwelt zu reflektieren; immerhin werden jeden Tag über 100 Verbindungen in Träwelling getrackt.
+Ein Teil unserer Nutzer*innen möchte immer mehr von der Plattform. Auf dem 36C3 und darüber hinaus haben wir viele Zuschriften erhalten, die sich bestimmte Features (Private Reisen, ein besserer Export, etc.</p></div></a><a href=https://blog.traewelling.de/posts/traewelling-release-1-0/ class=catalogue-item><div><time datetime="2019-11-24 13:30:00 +0000 UTC" class=catalogue-time>November 24, 2019</time><h2 class=catalogue-title>Traewelling Release 1 0</h2><div class=catalogue-line></div><p>Lange hat sich an Träwelling nichts getan, obwohl es seit 2017 mehrere Anläufe gab.
 August hat uns dann der Tatendrang gepackt und jetzt, gut drei Monate später, sind wir beim ersten vollen Release von Träwelling – sechs Jahre nach Beginn des Projekts.
 Wir?! – ja, denn neben Levin arbeiten jetzt auch Jannik und Karl an dem Projekt.
-Was hat sich geändert? Wir haben die meisten Features, die Träwelling besaß, wieder aufgegriffen und auf einer neuen, erweiterbaren Plattform auf Basis von Laravel reimplementiert.
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/api-probleme/ class=catalogue-item>
-<div>
-<time datetime="2017-08-01 00:00:00 +0000 UTC" class=catalogue-time>August 1, 2017</time>
-<h2 class=catalogue-title>API-Probleme im In- & Ausland</h2>
-<div class=catalogue-line></div>
-<p>
-Bei uns ist intern einiges schief gelaufen. Es ging total an uns vorbei, dass opendata.ch ihre Api abgeändert hat. So dachten wir, die Fehler, wie fehlende Abfahrten an gewissen Bahnhöfen, die gestern und heute (ab 31.07.2017) auftraten, waren ein typischer Schluckauf der SBB-API. Weit gefehlt.
+Was hat sich geändert? Wir haben die meisten Features, die Träwelling besaß, wieder aufgegriffen und auf einer neuen, erweiterbaren Plattform auf Basis von Laravel reimplementiert.</p></div></a><a href=https://blog.traewelling.de/posts/api-probleme/ class=catalogue-item><div><time datetime="2017-08-01 00:00:00 +0000 UTC" class=catalogue-time>August 1, 2017</time><h2 class=catalogue-title>API-Probleme im In- & Ausland</h2><div class=catalogue-line></div><p>Bei uns ist intern einiges schief gelaufen. Es ging total an uns vorbei, dass opendata.ch ihre Api abgeändert hat. So dachten wir, die Fehler, wie fehlende Abfahrten an gewissen Bahnhöfen, die gestern und heute (ab 31.07.2017) auftraten, waren ein typischer Schluckauf der SBB-API. Weit gefehlt.
 Wir konnten jetzt kurzfristig auf eine temporäre Lösung umstellen: eine selbstgehostete Schnittstelle der API. So ist die volle Funktion leider auch nicht gewährleistet.
-Wir müssen uns jetzt nach einer neuen Lösung umsehen, wie zum Beispiel das Opendata-Programm der Bahn.
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/wir-haben-eine-app/ class=catalogue-item>
-<div>
-<time datetime="2014-07-16 00:00:00 +0000 UTC" class=catalogue-time>July 16, 2014</time>
-<h2 class=catalogue-title>Wir haben eine App! Irgendwie...</h2>
-<div class=catalogue-line></div>
-<p>
-Ihr wartet alle schon sehnsüchtig auf eine App und endlich habe ich (Levin) es geschafft, eine total crappige App zu schreiben. Yay!
+Wir müssen uns jetzt nach einer neuen Lösung umsehen, wie zum Beispiel das Opendata-Programm der Bahn.</p></div></a><a href=https://blog.traewelling.de/posts/wir-haben-eine-app/ class=catalogue-item><div><time datetime="2014-07-16 00:00:00 +0000 UTC" class=catalogue-time>July 16, 2014</time><h2 class=catalogue-title>Wir haben eine App! Irgendwie...</h2><div class=catalogue-line></div><p>Ihr wartet alle schon sehnsüchtig auf eine App und endlich habe ich (Levin) es geschafft, eine total crappige App zu schreiben. Yay!
 Um diese App auf Herz und Nieren zu testen, brauchen wir natürlich ein paar Alpha-/Beta-Tester und dafür brauchen wir Dich! Ja, genau Dich!
-Jetzt fragst du dich sicher: “Was muss ich dazu tun? Ihr wollt doch sicher Geld oder meine Seele! D:" Gut, Geld wollen wir immer, aber das ist eine andere Sache.
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/neues_update/ class=catalogue-item>
-<div>
-<time datetime="2013-11-29 00:00:00 +0000 UTC" class=catalogue-time>November 29, 2013</time>
-<h2 class=catalogue-title>Neues Update - 0.1.2.5-0009 β</h2>
-<div class=catalogue-line></div>
-<p>
-Heute habe ich ein kleines Update (Version 0.1.2.5-0009 β) herausgebracht, mit einem Feature, das “vieles” verändern wird.
+Jetzt fragst du dich sicher: “Was muss ich dazu tun? Ihr wollt doch sicher Geld oder meine Seele! D:" Gut, Geld wollen wir immer, aber das ist eine andere Sache.</p></div></a><a href=https://blog.traewelling.de/posts/neues_update/ class=catalogue-item><div><time datetime="2013-11-29 00:00:00 +0000 UTC" class=catalogue-time>November 29, 2013</time><h2 class=catalogue-title>Neues Update - 0.1.2.5-0009 β</h2><div class=catalogue-line></div><p>Heute habe ich ein kleines Update (Version 0.1.2.5-0009 β) herausgebracht, mit einem Feature, das “vieles” verändern wird.
 Bis jetzt wurde der Nutzerrang immer nach den bis jetzt erreichten Punkten ausgerechnet, wodurch diejenigen profitierten, die #Träwelling schon etwas länger haben. Weshalb die Nutzer mit 1000 Punkten+ eigentlich fast nicht zu erreichen waren.
-Im neuen Update wird der Rang nach “Wochenpunktzahl” ausgerechnet. Wie es der Name schon sagt, bleiben die Punkte etwa eine Woche bestehen.
-</p>
-</div>
-</a>
-<a href=https://blog.traewelling.de/posts/wir-haben-einen-blog-yay/ class=catalogue-item>
-<div>
-<time datetime="2013-11-02 00:00:00 +0000 UTC" class=catalogue-time>November 2, 2013</time>
-<h2 class=catalogue-title>Wir Haben Einen Blog Yay</h2>
-<div class=catalogue-line></div>
-<p>
-In unserem ersten Blogpost möchte ich unsere zwei neuen Mitglieder im #Träwelling-Team recht herzlich begrüßen: @janh97 (Account inzwischen gelöscht) im Bereich “Design&Code” und @nerdhair_ (Account inzwischen gelöscht) im Bereich “Marketing".
+Im neuen Update wird der Rang nach “Wochenpunktzahl” ausgerechnet. Wie es der Name schon sagt, bleiben die Punkte etwa eine Woche bestehen.</p></div></a><a href=https://blog.traewelling.de/posts/wir-haben-einen-blog-yay/ class=catalogue-item><div><time datetime="2013-11-02 00:00:00 +0000 UTC" class=catalogue-time>November 2, 2013</time><h2 class=catalogue-title>Wir Haben Einen Blog Yay</h2><div class=catalogue-line></div><p>In unserem ersten Blogpost möchte ich unsere zwei neuen Mitglieder im #Träwelling-Team recht herzlich begrüßen: @janh97 (Account inzwischen gelöscht) im Bereich “Design&Code” und @nerdhair_ (Account inzwischen gelöscht) im Bereich “Marketing".
 Wir arbeiten momentan hart daran, Fernbus-Unternehmen in unser System zu integrieren, die Benutzeroberfläche zu optimieren und viele neue Funktionen einzubauen.
-Grüße, Levin.
-</p>
-</div>
-</a>
-</div>
-<div class=pagination>
-<span>1</span>
-</div>
-</main>
-<footer>
-<span>
-&copy; <time datetime="2021-10-12 12:25:06.951701803 +0000 UTC m=+0.050495464">2021</time> Das Träwelling Team. Made with <a href=https://gohugo.io>Hugo</a> using the <a href=https://github.com/EmielH/tale-hugo/>Tale</a> theme.
-</span>
-</footer>
-</body>
-</html>
+Grüße, Levin.</p></div></a></div><div class=pagination><span>1</span></div></main><footer><span>&copy; <time datetime="2022-03-31 10:57:25.813966575 +0000 UTC m=+0.059515536">2022</time> Das Träwelling Team. Made with <a href=https://gohugo.io>Hugo</a> using the <a href=https://github.com/EmielH/tale-hugo/>Tale</a> theme.</span></footer></body></html>
