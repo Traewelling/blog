@@ -14,7 +14,7 @@ Um dich zu verifizieren, findest du einen PIN-Code in einer blauen Box [auf dein
 
 Die Telefonnummer ist die [+49 2152 807 9589](tel:+4921528079589) zu den üblichen Kosten deines Telefonvertrags ins deutsche Festnetz.
 
-Erreichbar sind wir zu unseren regulären Arbeitszeiten von 07:00 - 24:00 Uhr CEST.
+Erreichbar sind wir zu unseren regulären Arbeitszeiten von 07:00 - 22:22 Uhr CEST.
 
 Wir erwarten zeitweise Warteschlangen, die unseren Service beeinträchtigen können. Wir werden euch auf [Twitter](https://twitter.com/traewelling) und im [Fediverse](https://chaos.social/@traewelling) darüber in Kenntnis setzen.
 
