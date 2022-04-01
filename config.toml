@@ -14,7 +14,7 @@ sectionPagesMenu = "main"
 
 [menu]
    [[menu.main]]
-     name = 'Über Träewlling'
+     name = 'Über Träwelling'
      url = 'https://traewelling.de/about'
      weight = -110
    [[menu.main]]
