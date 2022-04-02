@@ -12,7 +12,9 @@ Wir wissen, dass das mobile Internet auf den deutschen Zugstrecken nicht immer g
 Tagsüber bieten wir ab sofort eine Hotline mit echten Menschen an, bei dem Du anrufen kannst.
 Um dich zu verifizieren, findest du einen PIN-Code in einer blauen Box [auf deinen Dashboard](https://traewelling.de/dashboard).
 
-Die Telefonnummer ist die [+49 2152 807 9589](tel:+4921528079589) zu den üblichen Kosten deines Telefonvertrags ins deutsche Festnetz.
+Die Telefonnummer ist die [+49 xxxx xxxx xxx](#) zu den üblichen Kosten deines Telefonvertrags ins deutsche Festnetz.
+
+> Achtung, der erste April ist vorbei! Bitte nicht mehr anrufen!
 
 Erreichbar sind wir zu unseren regulären Arbeitszeiten von 07:00 - 22:22 Uhr CEST.
 
