@@ -1,5 +1,5 @@
 baseURL = 'https://blog.traewelling.de/'
-languageCode = 'de-de'
+locale = 'de-de'
 title = 'Träwelling Blog'
 theme = "tale"
 sectionPagesMenu = "main"
