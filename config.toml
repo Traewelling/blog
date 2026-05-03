@@ -4,8 +4,14 @@ title = 'Träwelling Blog'
 theme = "tale"
 sectionPagesMenu = "main"
 
-[Author]
-    name = "Das Träwelling Team"
+[params]
+    [params.author]
+        name = "Das Träwelling Team"
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true
 
 [taxonomies]
    tag = "tags"
