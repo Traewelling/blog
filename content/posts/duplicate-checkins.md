@@ -27,7 +27,9 @@ Ohne diese Regel war es technisch möglich, denselben Checkin mehrfach zu speich
 Praxis hat dabei ein weiterer Umstand geholfen: Der Eincheck-Button auf Träwelling ließ sich
 bis vor einigen Wochen mehrfach klicken, ohne dass die Seite das verhindert hat. Wer also auf
 schlechtem Internet unterwegs war und ungeduldig geklickt hat. Herzliches Willkommen im Club,
-ihr seid nicht allein.
+ihr seid nicht allein. Insgesamt sind rund 5.100 Checkins betroffen, verteilt auf rund 1.700 User.
+Im Verhältnis zu den knapp 6,8 Millionen Checkins auf Träwelling ist das wenig, aber wir möchten es trotzdem sauber
+haben.
 
 ## Was genau ist ein Duplikat in unserem Fall?
 
@@ -91,6 +93,9 @@ Without this rule, it was technically possible to save the same check-in multipl
 In practice, another issue made this worse: until a few weeks ago, Träwelling's check-in
 button could be clicked multiple times without the app preventing it. If you were on a bad
 connection and impatiently tapping away. You're not alone, we've heard from a few of you.
+In total, around 5,100 check-ins are affected, spread across about 1,700 users.
+Relative to the nearly 6.8 million check-ins on Träwelling that's a small number,
+but we'd like to clean it up properly.
 
 ## What exactly is a duplicate?
 
