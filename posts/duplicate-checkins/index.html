@@ -1,0 +1,47 @@
+<!doctype html><html lang=en><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Doppelte Checkins: Bitte aufräumen bis zum 31. Mai &#183; Träwelling Blog</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><link rel=icon href=favicon.ico><link rel=icon type=image/png sizes=32x32 href=/images/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/images/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><link href rel=alternate type=application/rss+xml title="Träwelling Blog"></head><body><nav class=nav><div class=nav-container><a href=/><h2 class=nav-title>Träwelling Blog</h2></a><ul><li><a href=https://traewelling.de/about><span>Über Träwelling</span></a></li><li><a href=https://status.traewelling.de><span>Serverstatus</span></a></li><li><a href=https://chaos.social/@traewelling><span>Mastodon</span></a></li><li><a href=/posts/><span>Posts</span></a></li></ul></div></nav><main><div class=post><div class=post-info><span>Written by</span>
+MrKrisKrisu<br><span>on&nbsp;</span><time datetime="2026-05-06 00:00:00 +0000 UTC">May 6, 2026</time></div><h1 class=post-title>Doppelte Checkins: Bitte aufräumen bis zum 31. Mai</h1><div class=post-line></div><p><em>(english version below)</em></p><p><strong>TL;DR:</strong> Schaut bitte auf <a href=https://traewelling.de/statuses/duplicates>traewelling.de/statuses/duplicates</a> und löscht
+eure doppelten Checkins. Ab dem 31. Mai 2026 erledigen wir das automatisch.</p><hr><p>Wir haben ein kleines Datenbankproblem, das wir gerne gemeinsam mit euch bereinigen möchten,
+bevor wir es automatisiert erledigen müssen.</p><h2 id=was-ist-passiert>Was ist passiert?</h2><p>Vor einigen Jahren haben wir beim Umbauen unserer Datenbankstruktur versehentlich einen
+sogenannten <strong>UNIQUE-Constraint</strong> auf der Tabelle für Checkins entfernt. Ein UNIQUE-Constraint
+ist eine Datenbankregel, die dafür sorgt, dass eine bestimmte Kombination von Werten nur einmal
+vorkommen darf. In unserem Fall: ein User darf nicht zweimal in dieselbe Fahrt vom selben
+Startpunkt einchecken.</p><p>Ohne diese Regel war es technisch möglich, denselben Checkin mehrfach zu speichern. In der
+Praxis hat dabei ein weiterer Umstand geholfen: Der Eincheck-Button auf Träwelling ließ sich
+bis vor einigen Wochen mehrfach klicken, ohne dass die Seite das verhindert hat. Wer also auf
+schlechtem Internet unterwegs war und ungeduldig geklickt hat. Herzliches Willkommen im Club,
+ihr seid nicht allein.</p><h2 id=was-genau-ist-ein-duplikat-in-unserem-fall>Was genau ist ein Duplikat in unserem Fall?</h2><p>Ein Duplikat entsteht, wenn für denselben User zwei oder mehr Checkins mit derselben
+<strong>Fahrt</strong> (<code>trip_id</code>) und demselben <strong>Abfahrtsstopp</strong> (<code>origin_stopover_id</code>) existieren.
+Der Abfahrtsstopp ist dabei eindeutig durch Station und geplante Abfahrtszeit definiert,
+also wäre &ldquo;ICE 74, Abfahrt Karlsruhe Hbf 10:37 Uhr&rdquo; eine eindeutige Kombination.</p><p>Technisch gesehen: Der UNIQUE-Constraint, den wir wiederherstellen wollen, liegt auf
+<code>(user_id, trip_id, origin_stopover_id)</code> in der <code>train_checkins</code>-Tabelle.</p><h2 id=warum-löscht-ihr-das-nicht-einfach>Warum löscht ihr das nicht einfach?</h2><p>Das wäre natürlich der einfachste Weg. Aber eure Checkins sind eure Reisedaten, und wir
+möchten nicht einfach irgendwelche Einträge löschen, ohne dass ihr die Chance hattet, das
+selbst zu kontrollieren. Vielleicht habt ihr einen der doppelten Checkins nachträglich
+bearbeitet, eine andere Destination gesetzt oder einen Kommentar hinzugefügt, der euch
+wichtig ist.</p><p>Deshalb haben wir eine temporäre Seite eingerichtet:</p><h2 id=traewellingdestatusesduplicates><a href=https://traewelling.de/statuses/duplicates>traewelling.de/statuses/duplicates</a></h2><p>Dort seht ihr alle eure Checkins, die als Duplikat gelten, gruppiert nach Fahrt und
+Abfahrtsstopp. Ihr könnt selbst entscheiden, welchen ihr behalten möchtet, und die anderen
+löschen.</p><h2 id=was-passiert-nach-dem-31-mai-2026>Was passiert nach dem 31. Mai 2026?</h2><p>Ab dem <strong>31. Mai 2026</strong> werden wir automatisiert alle verbleibenden Duplikate bereinigen.
+Dabei gilt folgende Regel: <strong>Der älteste Checkin einer Gruppe bleibt erhalten</strong>, also der
+mit der niedrigsten ID, sprich der, der zuerst angelegt wurde. Alle neueren Duplikate werden
+gelöscht.</p><p>Wenn euch das egal ist und ihr euren ältesten Checkin eh behalten wollt, müsst ihr nichts
+tun. Wenn ihr aber selbst die Kontrolle haben möchtet, schaut bis dahin bitte auf der
+Duplikate-Seite vorbei.</p><p>Sorry für die Umstände. :(</p><hr><h1 id=duplicate-check-ins-please-clean-up-by-31-may>Duplicate Check-ins: Please clean up by 31 May</h1><p><strong>TL;DR:</strong> Please check <a href=https://traewelling.de/statuses/duplicates>traewelling.de/statuses/duplicates</a> and delete your
+duplicate check-ins. After 31 May 2026, we will do it automatically.</p><hr><p>We have a small database issue that we&rsquo;d like to clean up together with you, before we have
+to do it automatically.</p><h2 id=what-happened>What happened?</h2><p>A few years ago, while restructuring our database, we accidentally removed a
+<strong>UNIQUE constraint</strong> on the check-ins table. A UNIQUE constraint is a database rule that
+ensures a specific combination of values can only appear once. In our case: a user should
+not be able to check in to the same trip from the same starting point more than once.</p><p>Without this rule, it was technically possible to save the same check-in multiple times.
+In practice, another issue made this worse: until a few weeks ago, Träwelling&rsquo;s check-in
+button could be clicked multiple times without the app preventing it. If you were on a bad
+connection and impatiently tapping away. You&rsquo;re not alone, we&rsquo;ve heard from a few of you.</p><h2 id=what-exactly-is-a-duplicate>What exactly is a duplicate?</h2><p>A duplicate occurs when two or more check-ins for the same user share the same
+<strong>trip</strong> (<code>trip_id</code>) and the same <strong>origin stop</strong> (<code>origin_stopover_id</code>). The origin stop
+is uniquely defined by a station and its planned departure time, so &ldquo;ICE 74, departing
+Karlsruhe Hbf at 10:37&rdquo; would be one unique combination.</p><p>Technically speaking: the UNIQUE constraint we want to restore covers
+<code>(user_id, trip_id, origin_stopover_id)</code> in the <code>train_checkins</code> table.</p><h2 id=why-not-just-delete-them-automatically>Why not just delete them automatically?</h2><p>That would obviously be the easiest path. But your check-ins are your travel data, and we
+don&rsquo;t want to just delete entries without giving you a chance to review them first. Maybe
+you edited one of the duplicate check-ins, set a different destination, or added a note
+that matters to you.</p><p>That&rsquo;s why we&rsquo;ve set up a temporary page:</p><h2 id=traewellingdestatusesduplicates-1><a href=https://traewelling.de/statuses/duplicates>traewelling.de/statuses/duplicates</a></h2><p>There you can see all your check-ins flagged as duplicates, grouped by trip and origin stop.
+You decide which one to keep, and delete the rest.</p><h2 id=what-happens-after-31-may-2026>What happens after 31 May 2026?</h2><p>Starting <strong>31 May 2026</strong>, we will automatically clean up all remaining duplicates. The rule
+is simple: <strong>the oldest check-in in a group is kept</strong>, that&rsquo;s the one with the lowest ID,
+i.e. the one created first. All newer duplicates will be deleted.</p><p>If you&rsquo;re fine with that and happy to keep your oldest check-in, you don&rsquo;t need to do
+anything. But if you&rsquo;d like to stay in control, please visit the duplicates page before then.</p><p>Sorry for the mess. :(</p></div><div class=pagination><a href=/posts/twitter-deprecation/ class="left arrow">&#8592;</a>
+<a href=# class=top>Top</a></div></main><footer><span>&copy; <time datetime="2026-05-06 17:33:49.808596714 +0000 UTC m=+0.072420546">2026</time> Das Träwelling Team. Made with <a href=https://gohugo.io>Hugo</a> using the <a href=https://github.com/EmielH/tale-hugo/>Tale</a> theme.</span></footer></body></html>
