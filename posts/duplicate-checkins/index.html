@@ -9,7 +9,9 @@ Startpunkt einchecken.</p><p>Ohne diese Regel war es technisch möglich, denselb
 Praxis hat dabei ein weiterer Umstand geholfen: Der Eincheck-Button auf Träwelling ließ sich
 bis vor einigen Wochen mehrfach klicken, ohne dass die Seite das verhindert hat. Wer also auf
 schlechtem Internet unterwegs war und ungeduldig geklickt hat. Herzliches Willkommen im Club,
-ihr seid nicht allein.</p><h2 id=was-genau-ist-ein-duplikat-in-unserem-fall>Was genau ist ein Duplikat in unserem Fall?</h2><p>Ein Duplikat entsteht, wenn für denselben User zwei oder mehr Checkins mit derselben
+ihr seid nicht allein. Insgesamt sind rund 5.100 Checkins betroffen, verteilt auf rund 1.700 User.
+Im Verhältnis zu den knapp 6,8 Millionen Checkins auf Träwelling ist das wenig, aber wir möchten es trotzdem sauber
+haben.</p><h2 id=was-genau-ist-ein-duplikat-in-unserem-fall>Was genau ist ein Duplikat in unserem Fall?</h2><p>Ein Duplikat entsteht, wenn für denselben User zwei oder mehr Checkins mit derselben
 <strong>Fahrt</strong> (<code>trip_id</code>) und demselben <strong>Abfahrtsstopp</strong> (<code>origin_stopover_id</code>) existieren.
 Der Abfahrtsstopp ist dabei eindeutig durch Station und geplante Abfahrtszeit definiert,
 also wäre &ldquo;ICE 74, Abfahrt Karlsruhe Hbf 10:37 Uhr&rdquo; eine eindeutige Kombination.</p><p>Technisch gesehen: Der UNIQUE-Constraint, den wir wiederherstellen wollen, liegt auf
@@ -32,7 +34,10 @@ ensures a specific combination of values can only appear once. In our case: a us
 not be able to check in to the same trip from the same starting point more than once.</p><p>Without this rule, it was technically possible to save the same check-in multiple times.
 In practice, another issue made this worse: until a few weeks ago, Träwelling&rsquo;s check-in
 button could be clicked multiple times without the app preventing it. If you were on a bad
-connection and impatiently tapping away. You&rsquo;re not alone, we&rsquo;ve heard from a few of you.</p><h2 id=what-exactly-is-a-duplicate>What exactly is a duplicate?</h2><p>A duplicate occurs when two or more check-ins for the same user share the same
+connection and impatiently tapping away. You&rsquo;re not alone, we&rsquo;ve heard from a few of you.
+In total, around 5,100 check-ins are affected, spread across about 1,700 users.
+Relative to the nearly 6.8 million check-ins on Träwelling that&rsquo;s a small number,
+but we&rsquo;d like to clean it up properly.</p><h2 id=what-exactly-is-a-duplicate>What exactly is a duplicate?</h2><p>A duplicate occurs when two or more check-ins for the same user share the same
 <strong>trip</strong> (<code>trip_id</code>) and the same <strong>origin stop</strong> (<code>origin_stopover_id</code>). The origin stop
 is uniquely defined by a station and its planned departure time, so &ldquo;ICE 74, departing
 Karlsruhe Hbf at 10:37&rdquo; would be one unique combination.</p><p>Technically speaking: the UNIQUE constraint we want to restore covers
@@ -44,4 +49,4 @@ You decide which one to keep, and delete the rest.</p><h2 id=what-happens-after-
 is simple: <strong>the oldest check-in in a group is kept</strong>, that&rsquo;s the one with the lowest ID,
 i.e. the one created first. All newer duplicates will be deleted.</p><p>If you&rsquo;re fine with that and happy to keep your oldest check-in, you don&rsquo;t need to do
 anything. But if you&rsquo;d like to stay in control, please visit the duplicates page before then.</p><p>Sorry for the mess. :(</p></div><div class=pagination><a href=/posts/twitter-deprecation/ class="left arrow">&#8592;</a>
-<a href=# class=top>Top</a></div></main><footer><span>&copy; <time datetime="2026-05-06 17:33:49.808596714 +0000 UTC m=+0.072420546">2026</time> Das Träwelling Team. Made with <a href=https://gohugo.io>Hugo</a> using the <a href=https://github.com/EmielH/tale-hugo/>Tale</a> theme.</span></footer></body></html>
+<a href=# class=top>Top</a></div></main><footer><span>&copy; <time datetime="2026-05-06 17:53:04.65613774 +0000 UTC m=+0.063592981">2026</time> Das Träwelling Team. Made with <a href=https://gohugo.io>Hugo</a> using the <a href=https://github.com/EmielH/tale-hugo/>Tale</a> theme.</span></footer></body></html>
